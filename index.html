@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Website with Login | Registration Form </title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+   <link rel="stylesheet" href="assets/css/styles.css">
+   <script src="assets/js/main.js" defer></script>
+</head>
+
+<body>
+
+
+   <header>
+      <nav class="navbar">
+         <span class="hamburger-btn"><i class="ri-menu-line"></i></span>
+         <a href="index.html" class="logo">
+            <img src="assets/img/logoipsum-407.svg" alt="logo">
+            <h2>CodeSM</h2>
+         </a>
+         <ul class="links">
+            <span class="hum-close"><i class="ri-close-fill"></i></span>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact us</a></li>
+         </ul>
+         <button class="login-btn">LOG IN</button>
+      </nav>
+   </header>
+<div class="blur-bg-overlay"></div>
+
+   <div class="form-popup">
+      <span class="close"><i class="ri-close-fill"></i></span>
+      <div class="form-box login">
+         <div class="form-details">
+            <h2>Welcome Back</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim repudiandae maiores ipsam, non eos
+               excepturi.</p>
+         </div>
+         <div class="form-content">
+            <h2>LOGIN</h2>
+            <form action="#">
+               <div class="input-field">
+                  <input type="text" required>
+                  <label for="email">Email</label>
+               </div>
+               <div class="input-field">
+                  <input type="password"  required>
+                  <label for="password">password</label>
+               </div>
+               <a href="#" class="forgot-pass">Forgot Password?</a>
+               <button class="login-bt">Log In</button>
+            </form>
+            <div class="bottom-link">
+               Don't have an account <a href="#" id="signup-link">Signup</a>
+            </div>
+         </div>
+      </div>
+
+      <div class="form-box signup">
+         <div class="form-details">
+            <h2>Create Account </h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim repudiandae maiores ipsam, non eos
+               excepturi.</p>
+         </div>
+         <div class="form-content">
+            <h2>SIGNUP</h2>
+            <form action="#">
+               <div class="input-field">
+                  <input type="text" id="email" required>
+                  <label for="email">Enter your email</label>
+               </div>
+               <div class="input-field">
+                  <input type="password" id="password" required>
+                  <label for="password">Create password</label>
+               </div>
+               <div class="policy-text">
+
+                  <input type="checkbox" name="policy" id="policy">
+                  <label for="policy">I agree the</label>
+                  <a href="#">Terms & Conditions</a>
+               </div>
+               <button class="login-btn">SIGN UP</button>
+            </form>
+            <div class="bottom-link">
+               Already have an account <a href="#" id="login-link">Login</a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

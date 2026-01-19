@@ -1,0 +1,399 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: url('../img/hero-bg.jpg') center/cover no-repeat;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    padding: 0 10px;
+    background-color: #000;
+}
+
+.navbar {
+    display: flex;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.navbar .hamburger-btn {
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.navbar .logo {
+    width: 40px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.navbar .logo h2 {
+    color: #fff;
+    font-size: 1.7rem;
+
+}
+
+.navbar .links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 35px;
+}
+
+.navbar .links a {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.navbar .links a:hover {
+    text-decoration: underline;
+    color: aqua;
+    text-underline-offset: 10px;
+
+}
+
+.login-btn {
+    border: 0;
+    outline: 0;
+    background: #fff;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 0%;
+    font-size: 16px;
+    font-weight: 560;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: aqua;
+    color: #000;
+}
+
+
+
+
+.navbar .logo img {
+    width: 30px;
+    height: 30px;
+    animation: spinLogo 2s linear infinite;
+    transform-style: preserve-3d;
+
+}
+
+@keyframes spinLogo {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.navbar .logo img:hover {
+    animation: stop;
+}
+
+
+
+
+
+
+
+
+
+
+
+.form-popup .close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 25px;
+    color: #000;
+    cursor: pointer;
+}
+
+.form-popup {
+    position: fixed;
+    background: #fff;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    max-width: 720px;
+    width: 100%;
+    border: 2px solid #fff;
+    opacity: 0;
+}
+
+.active .form-popup {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+
+.form-popup .form-box {
+    display: flex;
+
+}
+
+.form-box .form-details {
+    max-width: 330px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+
+
+}
+
+.login .form-details {
+    background: url('../img/login-img.jpg') center/cover;
+}
+
+.signup .form-details {
+    background: url('../img/signup-img.jpg') center/cover;
+}
+
+
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-box .form-content {
+    width: 100%;
+    padding: 30px;
+}
+
+form .input-field {
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    position: relative;
+}
+
+form .input-field input {
+    width: 100%;
+    height: 100%;
+    font-size: 0.95rem;
+    outline: 0;
+    padding: 0 15px;
+    border: 1px solid #717171;
+    border-radius: 5px;
+}
+
+form .input-field label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.input-field input:is(:focus, :valid) {
+    padding: 16px 15px 0;
+}
+
+.input-field input:focus {
+    border-color: aqua;
+}
+
+.input-field input:is(:focus, :valid)~label {
+    color: aqua;
+    font-size: 0.75rem;
+    transform: translateY(-120%);
+
+}
+
+.form-box a {
+    text-decoration: none;
+    color: aqua;
+}
+
+.form-box a:hover {
+    text-decoration: underline;
+}
+
+.form-box button {
+    width: 100%;
+    outline: 0;
+    border: 0;
+    font-size: 1rem;
+    padding: 14px 0;
+    border-radius: 3px;
+    margin: 25px 0;
+    color: #000;
+    font-weight: 650;
+    background: aqua;
+    cursor: pointer;
+
+}
+
+.form-box button:hover {
+    background: red;
+}
+
+.form-box .forgot-pass,
+.form-box .policy-text {
+    display: inline-flex;
+    margin-top: 14px;
+    font-size: 0.95rem;
+
+}
+
+.form-box .bottom-link {
+    text-align: center;
+}
+
+.signup .policy-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.signup .policy-text input {
+    width: 14px;
+    height: 14px;
+    margin-left: 5px;
+}
+
+.form-popup .signup,
+.form-popup.show-signup .login {
+    display: none;
+}
+
+.form-popup.show-signup .signup {
+    display: flex;
+}
+
+.blur-bg-overlay {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+    height: 100vh;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+
+}
+
+.active .blur-bg-overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.hamburger-btn,
+.hum-close {
+    display: none;
+}
+
+@media (max-width:768px) {
+
+
+
+
+    .form-popup {
+        width: 85%;
+    }
+
+    .form-popup .form-details {
+        display: none;
+    }
+
+    .forgot-pass .form-content {
+        padding: 30px 20px;
+    }
+}
+
+
+@media screen and (max-width:968px) {
+
+    .hamburger-btn,
+    .hum-close {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navbar .links {
+        padding-top: 60px;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        display: block;
+        text-align: center;
+        gap: 0px;
+        height: 100vh;
+        width: 100%;
+        background-color: #fff;
+        transition: all 0.3s ease;
+        z-index: 999;
+    }
+
+    .navbar .links.show-menu {
+        left: 0;
+    }
+
+    .navbar .links a {
+        color: #000;
+        display: inline-flex;
+        margin: 20px 0;
+        font-size: 1.2rem;
+        font-weight: 650;
+    }
+
+    .hum-close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        font-size: 25px;
+    }
+
+    .navbar {
+        padding: 15px 0;
+    }
+
+    .navbar .logo img {
+        display: none;
+    }
+
+    .navbar .logo h2 {
+        font-size: 1.4rem;
+    }
+
+    .login-btn {
+        padding: 7px 13px;
+        font-size: 0.9rem;
+    }
+}
